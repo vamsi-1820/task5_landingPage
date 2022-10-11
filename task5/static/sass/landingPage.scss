@@ -1,0 +1,156 @@
+@use 'base' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserret;
+}
+.container_fluid{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.head{
+    .container_fluid{
+        .header{
+            display: flex;           
+            &-left{
+                display: flex;
+                margin-left: 104px;
+                margin-right: auto;
+                &__title{
+                    font-size: 32px;
+                    color: $mb-red-900;
+                    font-weight: $font-weight-bold;
+                    margin:10px 24px 10px 0px ;
+                }
+                &__anchor{
+                    margin: 24px 48px 18px 0px ;
+                    font-size: $font-size-md;
+                    line-height: 1.43;
+                    color: $gray-dark;
+                    font-weight: $font-weight-semi-bold;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        border-bottom:2px solid $mb-red-900;
+                        border-left: 2px solid $mb-red-900;
+                        position: absolute;
+                        transform: rotate(-45deg);
+                        top: 6px  ;
+                        right: -12px;
+                    }
+                }
+
+            }
+            &-right{
+                display: flex;
+                margin-right: 102px;
+                &__anchor{
+                    margin: 24px 38px 18px 0px ;
+                    font-size: $font-size-md;
+                    line-height: 1.43;
+                    color: $gray-dark;
+                    font-weight: $font-weight-semi-bold;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        border-bottom: 2px solid $mb-red-900;
+                        border-left: 2px solid $mb-red-900;
+                        position: absolute;
+                        transform: rotate(-45deg);
+                        top: 6px  ;
+                        right: -12px;
+                    }
+                    &--post{
+                        margin:14px 0;
+                        padding: 10px 58px 10px 14px;
+                        font-size: $font-size-md;
+                        font-weight: $font-weight-semi-bold;
+                        background-color: $mb-gold-900;
+                        border-radius: 20px;
+                        position: relative;
+                        &::after{
+                            content: "Free";
+                            position: absolute;
+                            padding: 2px 5px;
+                            border-radius: 12px;
+                            font-size: $font-size-md;
+                            background-color: $white;
+                            margin-left: 8px;
+                            top: 8px;
+                        }
+                    }
+                    &--hamburger{
+                        width: 32px;
+                        height: 32px;
+                        margin-top: 16px;
+                        padding: 10px 8px;
+                        border-radius: 50%;
+                        background-color: $mb-gray-700;
+                        margin-left: 8px;
+                        position: relative;
+                        &__line{
+                            width: 16px;
+                            height: 2px;
+                            border-radius: 1.5px;
+                            border-bottom:2px solid $white ;
+                            padding: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.searchBar{
+    .container_fluid{
+        .filtersBar{
+            width: 100%;
+            background-color: $mb-red-900;
+            display: flex;
+            &--searchbar{
+                margin:12px 0px 12px 102px ;
+                border: none;
+                outline: none;
+                width: 320px;
+                height: 40px;
+                border-radius: 20px;
+                font-size: $font-size-sm;
+                color: $gray-dark;
+                line-height: 1.33;
+                font-weight: $font-weight-semi-bold;
+                padding:14px 16px 14px 46px;
+            }
+            &--filter{
+                margin:12px 0 12px 4px;
+                padding: 12px 32px 12px 16px ;
+                border-radius: 20px ;
+                background-color: $white;
+                font-size: $font-size-sm;
+                font-weight: $font-weight-semi-bold;
+                line-height: 1.33;
+                color: $gray-dark;
+                position: relative;
+                &::after{
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    border-bottom:2px solid $mb-red-900;
+                    border-left:2px solid $mb-red-900;
+                    top:16px;
+                    right: 18px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
